@@ -42,6 +42,20 @@ body {
     animation: clouds-animation 110s infinite;
 }
 
+#pontuacao {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 50px;
+}
+
+footer {
+    color: white;
+}
+
+footer > p > a {
+    color: white;
+}
+
 @keyframes pipe-animation{
     from {
         right: -80px;
