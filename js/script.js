@@ -1,5 +1,8 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+var ponto = document.querySelector('#pontuacao')
+var pon = ponto.innerHTML = 0;
+
 
 
 
@@ -16,6 +19,8 @@ const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const marioPisition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
+    console.log(pipe)
+
 
     if(pipePosition <= 44 && pipePosition > 0  && marioPisition < 65) {
 
@@ -28,9 +33,8 @@ const loop = setInterval(() => {
         mario.src = 'imagens/game-over.png'
         mario.style.marginLeft = '-5px'
 
-    }else {
-        
     }
+    
 }, 10);
 
 document.addEventListener('keydown', jump);
