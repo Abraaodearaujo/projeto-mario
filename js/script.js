@@ -1,8 +1,9 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 var ponto = document.querySelector('#pontuacao')
-var pon = ponto.innerHTML = 0;
-
+pontos = 0
+ponto.innerHTML = pontos;
+ponto_antigo = 0
 
 
 
@@ -35,6 +36,16 @@ const loop = setInterval(() => {
 
     }
     
-}, 10);
+    if(pipePosition <= 0){
+        pontos = pontos + 1
+        if(pontos != ponto_antigo + 1){
+            pontos = ponto_antigo + 1
+            ponto_antigo = pontos
+            ponto.innerHTML = pontos
+        }
+    }
+
+    
+}, 30);
 
 document.addEventListener('keydown', jump);

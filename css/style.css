@@ -56,6 +56,8 @@ body {
 
 footer {
     color: white;
+    position: relative;
+    transform: translateY(200%);
 }
 
 footer > p > a {
