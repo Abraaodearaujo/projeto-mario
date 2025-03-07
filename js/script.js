@@ -37,7 +37,7 @@ const loop = setInterval(() => {
     }
     
     if(pipePosition <= 0){
-        pontos = pontos + 1
+        pontos ++
         if(pontos != ponto_antigo + 1){
             pontos = ponto_antigo + 1
             ponto_antigo = pontos
@@ -45,7 +45,17 @@ const loop = setInterval(() => {
         }
     }
 
+    if(pontos > 10  &&  pontos < 20){
+        pipe.style.animation += "pipe-animation 1.0s infinite linear";
+
+    }
+
+    if(pontos > 20  &&  pontos < 30){
+        pipe.style.animation += "pipe-animation 0.5s infinite linear";
+
+    }
+
     
-}, 30);
+}, 20);
 
 document.addEventListener('keydown', jump);
